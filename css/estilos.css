@@ -1,0 +1,498 @@
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS GENERALES *-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/****** ESTILOS GENERAL ******/
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS HEADER *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+header{
+    background-color: orange;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+/****** HEADER: Navigation Bar ******/
+
+.navigationBarList{
+    list-style-type: none;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+    margin-right: 25px;  
+}
+
+.navigationLink{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navigationLink:hover{
+    color: black;
+    font-size: 25px;
+
+}
+
+.active{
+    color: brown;
+    font-size: 22px;
+}
+
+/****** HEADER: Pantalla Grande ******/
+
+.logo{
+    display: none;
+}
+
+h1{
+    margin: 2%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.checkMenu{
+    display: none;
+}
+
+.imgMenu{
+    display: none;
+}
+
+/****** Pantalla Media - Pequeña ******/
+
+@media(max-width: 768px){
+
+    .logo{
+        margin: 2%;
+        display: block;
+        height: 65px; 
+        width: auto;
+    }
+
+    .imgMenu{
+        display: block;
+    }
+
+    .navigationBarList{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        padding: 0;
+        width: 100%;
+        background-color: #fdba3f;
+        gap: 0;
+        opacity: 0.90;
+    }
+
+    .navigationLink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+    }
+
+    .navigationLink:hover{
+        background-color: #ffcf76;
+        color: black;
+        opacity: 1;
+    }
+
+    .checkMenu:checked + .navigationBarList{
+        display: flex;
+    }
+
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS MAIN *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+/****** MAIN: Index ******/
+
+.containerIndex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/****** ASIDE ******/
+aside{
+    flex: 30%; 
+    max-width: 30%;
+    padding: 20px;
+    background-color:bisque;
+}
+
+aside h2{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+aside h3{
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+ 
+.asideImg{
+    height: 90%;
+    width: 95%;
+    border-radius: 5%;
+}
+
+.videoLink img{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.videoLink h4{
+    opacity: 0;
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.videoLink h4:hover{
+    opacity: 1;
+}
+
+
+
+/****** SECTION ******/
+
+.containerSection{
+    flex: 70%;
+    max-width: 70%;
+    background-color: beige;
+    padding: 20px;
+}
+
+.containerSection h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    letter-spacing: 2px;
+}
+
+.containerSection img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.readMore{
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.readMore:hover{
+    font-size: 15px;
+}
+
+
+
+
+/****** MAIN: Producto ******/
+
+.containerProduct{
+    background-color: bisque;
+    width: 95%;
+    margin: 15px auto 15px;
+    padding: 1% 0;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.titleProduct{
+    font-size: 2em;
+    text-align: center;
+}
+
+.productRow{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+}
+
+.productColumn{
+    flex: 25%;
+    padding: 5px;
+}
+
+.productColumn img{
+    margin-top: 5px;
+    width: 100%;
+
+}
+
+.productColumn img:hover{
+    transform: scale(1.1);
+}
+
+/****** Pantalla Media ******/
+
+@media (max-width: 800px){
+
+    .productColumn{
+        flex: 34%;
+    }
+}
+
+/****** Pantalla Pequeña ******/
+
+@media (max-width: 600px){
+
+    .productColumn{
+        flex: 50%;
+    }
+}
+
+
+
+/****** MAIN: Presupuesto ******/
+
+.containerForm{
+    background-color: bisque;
+    width: 80%;
+    max-width: 1200px;
+    margin: 15px auto 15px;
+    padding: 3% 0;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.containerForm *{
+    box-sizing: border-box;
+}
+
+.titleForm{
+    font-size: 2em;
+    text-align: center;
+}
+
+.formList{
+    list-style-type: none;
+    padding: 0;
+    max-width: 1150px;
+    margin: 1%;
+}
+
+.formList li{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.formList > li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.formList li label{
+    padding: 8px;
+    font-weight: 300;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.formList > li:not(.liCheck) > label{
+    flex: 1 0 120px;
+    max-width: 220px;
+}
+
+.formList > li > label + *{
+    flex: 1 0 220px;
+}
+
+.formList li input:not([type='checkbox']), .formList li textarea{
+    padding: 10px;
+    border: none;
+}
+
+.liCheck input{
+    margin-left: 10px;
+}
+
+.liCheck label{
+    padding: auto;
+    margin: 10px;
+    flex: 1 0 100px;
+}
+
+.formList .liButtons button{
+    margin: auto;
+    padding: 8px 16px;
+    border: none;
+    background-color: #333;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    border-radius: 8px;
+}
+
+button:hover{
+    font-size: 10px;
+}
+
+
+
+/****** MAIN: Contacto ******/
+
+.containerContact{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionContact{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    padding: 20px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: bisque;
+}
+
+.boxContact{
+    max-width: 600px;
+}
+
+.titleContact{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tableContact{
+    margin: 10px 15px;
+    border: none;
+}
+
+.tableContact tbody tr th{
+    margin-bottom: 10px;
+    padding: 5px;
+    text-align: justify;
+    width: 200px;
+    letter-spacing: 2px;
+}
+
+.tableContact tbody tr td{
+    text-align: center;
+
+}
+
+iframe{
+    border-radius: 2em;
+    border: none;
+    width: 500px;
+    height: 500px;
+    opacity: 0.9;
+    transition: 0.5s ease-in-out;
+}
+
+iframe:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+@media(max-width: 768px){
+    iframe{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-* ESTILOS FOOTER *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: auto;;
+    background-color: #fdba3f;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.socialIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 5px 5px;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.iconElem{
+    list-style-type: none;
+}
+
+.icon{
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover{
+    transform: translateY(-10px);
+    font-size: 25px;
+    color: black;
+}
+
+.copyright{
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 15px;
+    height: min-content;
+}
+
+
+
