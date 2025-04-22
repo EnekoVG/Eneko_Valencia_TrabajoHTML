@@ -76,6 +76,8 @@ h1{
 
 .imgMenu{
     display: none;
+    width: 60px;
+    height: 60px;
 }
 
 /****** Pantalla Media - Pequeña ******/
